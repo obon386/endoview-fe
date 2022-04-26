@@ -1,0 +1,24 @@
+<div class="captionAndNavi">
+    <div class="staticCaption">Static Caption</div>
+    <div class="yearCaption">Year Caption</div>
+    <div class="rightNav">
+        <mat-accordion>
+        <!-- #docregion basic-panel -->
+        <!-- #docregion hide-toggle -->
+        <mat-expansion-panel *ngFor="let year of years" [expanded]="year === selectedYear" hideToggle>
+            <!-- #enddocregion hide-toggle -->
+            <mat-expansion-panel-header>
+            <mat-panel-title [ngClass]="yearClass(year)"> {{year}} </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+            <mat-list-item *ngFor="let month of getMonths(year)">
+                <button mat-icon-button [ngClass]="{ 'textSelected' : isMonthSelected(year, month) }" (click)="selectMonth(year, month)">
+                    {{month}}
+                </button>
+            </mat-list-item>
+            </mat-nav-list>
+        </mat-expansion-panel>
+        <!-- #enddocregion basic-panel -->
+        </mat-accordion>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+.leftContent {
+    border-right: 1px solid #f0f0f5;
+    width: 80%;
+  }
+  
+  .content {
+    margin: 24px;  
+  }
+  
+  .contentLine {
+      border-bottom: 1px solid #f0f0f5;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+  }
+  
+  .weekCaptionOuter {
+      display: flex;
+      width: 18%;
+  }
+  
+  .weekCaptionInner {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-height: 150px;
+      padding: 16px 0;
+  }
+  
+  .weekCaptionDays {
+      color: #242428;
+      margin-bottom: 16px;
+  }
+  
+  .text-title3 {
+      font-size: 20px;
+      line-height: 25px;
+  }
+  
+  .text-bold {
+      font-weight: 700;
+  }
+  
+  .daysCaption {
+      display: flex;
+      width: 82%;
+  }
+  
+  .dayEntry {
+      display: flex;
+      flex: 1 1 0;
+      flex-direction: column;
+      min-width: 0;
+      padding: 16px 8px;
+      position: relative;
+  }
+  
+  .trainingLink {
+      display: flex;
+      flex-direction: column;
+      height: 144px;
+      padding: 4px 0;
+  }
+  
+  .trainingCell {
+      align-items: center;
+      align-self: center;
+      display: flex;
+      height: 98px;
+      justify-content: center;
+      margin-bottom: 8px;
+      width: 98px;
+  }

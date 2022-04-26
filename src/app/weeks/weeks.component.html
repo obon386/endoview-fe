@@ -1,0 +1,26 @@
+<div id="scroll-container1" *ngIf="(isLoading$ | async) === false" (scroll)="onWindowScroll($event)" class="leftContent">
+    <div *ngFor="let week of getWeeks()" [attributes]="getDivAttributes(week)" data-display-type="multisport_goal" class="contentLine">
+        <!--data-timestamp="getDataTimestamp(week)"-->
+        <div class="weekCaptionOuter">
+        <div class="weekCaptionInner">
+            <div class="text-title3 text-bold weekCaptionDays">
+            {{week.monthOfDayFirst}} {{week.dayFirst}} - {{week.monthOfDayLast}} {{week.dayLast}}
+            </div>
+        </div>
+        </div>
+        <div class="daysCaption">
+        <div *ngFor="let day of weekDays" class="dayEntry">
+            <a *ngFor="let tr of getTrainings(day)" href="#" class="trainingLink">
+            <div class="trainingCell">
+                <svg class="_2KZuV3tNNf4hvyBE66nb-w" height="56.45830221560898" width="56.45830221560898">
+                <circle r="28.22915110780449" fill="#36C597" cx="28.22915110780449" cy="28.22915110780449"></circle>
+                <text class="text-caption1 text-bold" x="50%" y="50%" dominant-baseline="central" text-anchor="middle" fill="#ffffff">0:44</text>
+                </svg>
+            </div>
+            </a>
+        </div>
+        </div>
+    </div>
+</div>
+<mat-spinner *ngIf="isLoading$ | async" diameter="300"></mat-spinner>
+
